@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package nuñez_junior_prueba1lab;
-
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -14,6 +14,7 @@ public class Nuñez_Junior_Prueba1Lab {
 
     public static void main(String[] args) {
         Scanner lea = new Scanner(System.in);
+        Random random=new Random();
 
         while (true) {
             System.out.println("\n Ingrese que desea hacer: " +
@@ -27,7 +28,7 @@ public class Nuñez_Junior_Prueba1Lab {
             switch (siguiente) {
                 case 1:
                     System.out.println("Ingrese una palabra");
-                    String palabrita = lea.nextLine();
+                    String palabrita = lea.next();
                     
                     for (int i = palabrita.length() - 1; i >= 0; i--) {
                         System.out.print(palabrita.charAt(i));
@@ -36,7 +37,23 @@ public class Nuñez_Junior_Prueba1Lab {
                     break;
                     
                 case 2:
-                    
+                    int num=0;
+                    int suma=0;
+                    System.out.println("Favor ingrese el numero al que desea evaluar: ");
+                            num = lea.nextInt();
+                            for (int cont = 1; cont< num; cont++) {
+                                if (num % cont == 0) {
+                                    suma = suma + cont;
+                                }
+                            }
+                            if ( suma == num) {
+                                System.out.println("El numero es perfecto");
+                                break;
+                            } else {
+                                System.out.println("El numero no es perfecto.");
+                                break;
+                            }
+                            
                 case 3:
                     
                     
