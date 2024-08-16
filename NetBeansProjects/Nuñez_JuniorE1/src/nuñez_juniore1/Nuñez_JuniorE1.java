@@ -11,7 +11,7 @@ public class Nuñez_JuniorE1 {
 
     public static void main(String[] args) {
         
-        Scanner lea= new Scanner(System.in);
+         Scanner lea= new Scanner(System.in);
         
         while(true){
             
@@ -57,7 +57,7 @@ public class Nuñez_JuniorE1 {
             }
         
         }else if(opcion==2){
-          
+            
             try{
                 System.out.println("Ingrese su numero:");
                 double maxNumero = lea.nextDouble(); 
@@ -91,7 +91,6 @@ public class Nuñez_JuniorE1 {
                 
                 
         }else if (opcion==3){
-           
             try{
             System.out.println("Ingrese su nombre:");
             String nombre = lea.next();
@@ -155,9 +154,62 @@ public class Nuñez_JuniorE1 {
         
         
         }else if (opcion==4){
-          
+            
+         try {
+             
+                    System.out.println("Escriba una palabra: ");
+                    String palabra = lea.next().toLowerCase();
+                    
+                    int contvocales = 0;
+
+                    for (int cont = 0; cont <= palabra.length() - 1; cont++) {
+                        char vocales = palabra.charAt(cont);
+
+                     switch (vocales) {
+                            
+                        case 'a':
+                            
+                          contvocales++;
+                          
+                             break;
+                             
+                        case 'e':
+                            
+                           contvocales++;
+                                
+                             break;
+                             
+                        case 'i':
+                            
+                           contvocales++;
+                                
+                             break;
+                             
+                        case 'o':
+                            
+                           contvocales++;
+                           
+                             break;
+                                
+                        case 'u':
+                            
+                           contvocales++;
+                           
+                             break;
+                                
+                        }
+                    }
+
+                    System.out.println("Esta palabra contiene un total de "+contvocales+" vocales");
+                    
+                }catch (Exception e) {
+                    System.out.println("Ingrese datos validos");
+                    lea.nextLine();
         
+        }
     }else if(opcion==5){
+            System.out.println("HASTA LUEGOOOO!!! <3");
+            break;
             
         }
   }
