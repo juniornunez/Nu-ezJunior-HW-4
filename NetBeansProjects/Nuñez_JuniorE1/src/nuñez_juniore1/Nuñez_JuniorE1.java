@@ -92,7 +92,64 @@ public class Nuñez_JuniorE1 {
                 
         }else if (opcion==3){
            
-            
+            try{
+            System.out.println("Ingrese su nombre:");
+            String nombre = lea.next();
+
+            int canalNormales = 0;
+            int canalHD = 0;
+
+            do {
+                System.out.println("Ingrese el tipo de canal (HD/NORMAL):");
+                String tipoCanal = lea.next().toUpperCase();
+
+                if (tipoCanal.equals("HD")) {
+                    canalHD++;
+                } else if (tipoCanal.equals("NORMAL")) {
+                    canalNormales++;
+                } else {
+                    System.out.println("Tipo de canal no válido, intente nuevamente.");
+                    continue;
+                }
+
+                System.out.println("Desea ingresar otro canal? (SI/NO)");
+                String respuesta = lea.next().toUpperCase();
+                if (!respuesta.equals("SI")) {
+                    break;
+                }
+
+            } while (true);
+
+            System.out.println("Ingrese el tipo de Caja Digital (1.LIGHTBOX / 2.HDBOX / 3.DVRBOX):");
+            int tipoDeCaja = lea.nextInt();
+            int costoCaja = 0;
+
+            if (tipoDeCaja==1) {
+                costoCaja = 50;
+            } else if (tipoDeCaja==2) {
+                costoCaja = 100;
+            } else if (tipoDeCaja==3) {
+                costoCaja = 150;
+            } else {
+                System.out.println("Tipo de caja no válido.");
+                continue;
+            }
+
+            int subtotal = (canalNormales * 20) + (canalHD * 30) + costoCaja;
+            double impuesto = subtotal * 0.15;
+            double total = subtotal + impuesto;
+
+            System.out.println("***FACTURA***");
+            System.out.println("Nombre: " + nombre);
+            System.out.println("Cantidad de canales normales normales: " + canalNormales);
+            System.out.println("Cantidad de canales en HD: " + canalHD);
+            System.out.println("Subtotal: " + subtotal + " Lps");
+            System.out.println("Impuesto (15%): " + impuesto + " Lps");
+            System.out.println("Total a pagar: " + total + " Lps");
+            }catch(Exception e){
+                System.out.println("Ingrese un dato valido");
+                lea.nextLine();
+            }
             
         
         
