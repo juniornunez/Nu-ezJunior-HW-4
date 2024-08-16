@@ -57,7 +57,38 @@ public class Nuñez_JuniorE1 {
             }
         
         }else if(opcion==2){
-         
+          
+            try{
+                System.out.println("Ingrese su numero:");
+                double maxNumero = lea.nextDouble(); 
+                double sumaNumeros = maxNumero; 
+                int contadorNumeros = 1; 
+                
+                do {
+                    System.out.println("Ingrese otro numero:");
+                    double nums = lea.nextDouble();
+                    sumaNumeros += nums; 
+                    contadorNumeros++;
+                    if (nums > maxNumero) {
+                        maxNumero = nums;
+                        
+                    }
+                    System.out.println("Desea seguir ingresando numeros? (1.Si / 2.No)");
+                    continuar = lea.nextInt();
+                    
+                } while (continuar == 1);
+                
+                
+                double promedio = sumaNumeros / contadorNumeros; 
+                
+                
+                System.out.println("El numero mayor es: " + maxNumero);
+                System.out.println("El promedio de los numeros ingresados es: " + promedio);
+            }catch(Exception e){
+                System.out.println("Ingrese un dato valido");
+                lea.nextLine();
+            }
+                
                 
         }else if (opcion==3){
            
