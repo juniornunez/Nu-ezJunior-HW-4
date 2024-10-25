@@ -11,7 +11,7 @@ import java.awt.*;
 
 /**
  *
- * @author Junior Nuñez
+ * @author Junior Nuñes
  */
 public class Main extends JFrame implements ComponenteVisual {
 
